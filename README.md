@@ -3,6 +3,7 @@
 ```mermaid
 flowchart TD
     A[Prompt, e.g. 'Create table'] -->B(Select programing language, ask for details, 'Human-in-the-loop')
+    B <--> I[Retreive data from relevant knowledge base, e.g., docs]
     B --> C{LLM asks for details, e.g. 'Could you please specify the language, the table columns and rows'}
     C -->|Ask more questions|B
     C -->|Start generating| E[Choose lang, engine, format; JSON Schema]
